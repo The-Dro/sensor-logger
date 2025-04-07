@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="max-age=0, no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <title>Sensor Data Dashboard</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+          integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+          crossorigin=""/>
+    <link rel="stylesheet" href="styles.css?v=1.0.1">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header-container">
+                <h1>Sensor Data Dashboard</h1>
+                <div class="connection-status disconnected" id="connection-status">Disconnected</div>
+            </div>
+            <div class="module-controls">
+                <label><input type="checkbox" id="accelerometer-toggle" checked data-module="accelerometer"> Accelerometer</label>
+                <label><input type="checkbox" id="gyroscope-toggle" checked data-module="gyroscope"> Gyroscope</label>
+                <label><input type="checkbox" id="magnetometer-toggle" checked data-module="magnetometer"> Magnetometer</label>
+                <label><input type="checkbox" id="compass-toggle" checked data-module="compass"> Compass</label>
+                <label><input type="checkbox" id="orientation-toggle" checked data-module="orientation"> Orientation</label>
+                <label><input type="checkbox" id="gravity-toggle" checked data-module="gravity"> Gravity</label>
+                <label><input type="checkbox" id="microphone-toggle" checked data-module="microphone"> Microphone</label>
+                <label><input type="checkbox" id="location-toggle" checked data-module="location"> Location</label>
+            </div>
+        </header>
+        
+        <div class="dashboard">
+            <div class="module" id="accelerometer-module">
+                <h2>Accelerometer</h2>
+                <div class="module-content">
+                    <p>X: <span id="accel-x">--</span></p>
+                    <p>Y: <span id="accel-y">--</span></p>
+                    <p>Z: <span id="accel-z">--</span></p>
+                </div>
+            </div>
+
+            <div class="module" id="gyroscope-module">
+                <h2>Gyroscope</h2>
+                <div class="module-content">
+                    <p>X: <span id="gyro-x">--</span></p>
+                    <p>Y: <span id="gyro-y">--</span></p>
+                    <p>Z: <span id="gyro-z">--</span></p>
+                </div>
+            </div>
+
+            <div class="module" id="magnetometer-module">
+                <h2>Magnetometer</h2>
+                <div class="module-content">
+                    <p>Bearing: <span id="mag-bearing">--</span>°</p>
+                    <p>Accuracy: <span id="mag-accuracy">--</span></p>
+                </div>
+            </div>
+
+            <div class="module" id="compass-module">
+                <h2>Compass</h2>
+                <div class="module-content">
+                    <p>Bearing: <span id="compass-bearing">--</span>°</p>
+                    <p>Accuracy: <span id="compass-accuracy">--</span></p>
+                </div>
+            </div>
+
+            <div class="module" id="orientation-module">
+                <h2>Orientation</h2>
+                <div class="module-content">
+                    <p>Yaw: <span id="orientation-yaw">--</span></p>
+                    <p>Pitch: <span id="orientation-pitch">--</span></p>
+                    <p>Roll: <span id="orientation-roll">--</span></p>
+                    <p>Quaternion X: <span id="orientation-qx">--</span></p>
+                    <p>Quaternion Y: <span id="orientation-qy">--</span></p>
+                    <p>Quaternion Z: <span id="orientation-qz">--</span></p>
+                    <p>Quaternion W: <span id="orientation-qw">--</span></p>
+                </div>
+            </div>
+
+            <div class="module" id="gravity-module">
+                <h2>Gravity</h2>
+                <div class="module-content">
+                    <p>X: <span id="gravity-x">--</span></p>
+                    <p>Y: <span id="gravity-y">--</span></p>
+                    <p>Z: <span id="gravity-z">--</span></p>
+                </div>
+            </div>
+
+            <div class="module" id="microphone-module">
+                <h2>Microphone</h2>
+                <div class="module-content">
+                    <p>dBFS: <span id="mic-dbfs">--</span></p>
+                </div>
+            </div>
+
+            <div class="module" id="location-module">
+                <h2>Location</h2>
+                <div class="module-content">
+                    <p>Latitude: <span id="location-lat">--</span></p>
+                    <p>Longitude: <span id="location-lon">--</span></p>
+                    <p>Altitude: <span id="location-alt">--</span> m</p>
+                    <p>Accuracy: <span id="location-accuracy">--</span> m</p>
+                    <p>Speed: <span id="location-speed">--</span> m/s</p>
+                </div>
+            </div>
+
+            <div class="module" id="map-module">
+                <h2>Location Map</h2>
+                <div class="module-content">
+                    <div id="map"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+            integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+            crossorigin=""></script>
+    <script src="script.js"></script>
+</body>
+</html> 

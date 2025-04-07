@@ -1,0 +1,266 @@
+:root {
+    --neon-pink: #ff2a6d;
+    --neon-blue: #05d9e8;
+    --neon-purple: #d300c5;
+    --dark-bg: #0d0221;
+    --darker-bg: #070215;
+    --text-color: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Courier New', monospace;
+    background-color: var(--dark-bg);
+    color: var(--text-color);
+    min-height: 100vh;
+    background-image: 
+        linear-gradient(45deg, var(--darker-bg) 25%, transparent 25%),
+        linear-gradient(-45deg, var(--darker-bg) 25%, transparent 25%),
+        linear-gradient(45deg, transparent 75%, var(--darker-bg) 75%),
+        linear-gradient(-45deg, transparent 75%, var(--darker-bg) 75%);
+    background-size: 20px 20px;
+    background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+    padding: 20px;
+    background: rgba(13, 2, 33, 0.8);
+    border: 2px solid var(--neon-blue);
+    box-shadow: 0 0 10px var(--neon-blue);
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+h1 {
+    color: var(--neon-pink);
+    text-shadow: 0 0 10px var(--neon-pink);
+    margin-bottom: 0;
+}
+
+.module-controls {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.module-controls label {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+    color: var(--neon-blue);
+}
+
+.module-controls input[type="checkbox"] {
+    accent-color: var(--neon-purple);
+}
+
+.dashboard {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.module {
+    background: rgba(13, 2, 33, 0.8);
+    border: 2px solid var(--neon-purple);
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px var(--neon-purple);
+    transition: all 0.3s ease;
+}
+
+.module:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px var(--neon-purple);
+}
+
+.module h2 {
+    color: var(--neon-blue);
+    text-shadow: 0 0 5px var(--neon-blue);
+    margin-bottom: 15px;
+    border-bottom: 1px solid var(--neon-blue);
+    padding-bottom: 10px;
+}
+
+.module-content {
+    display: grid;
+    gap: 10px;
+}
+
+.module-content p {
+    display: flex;
+    justify-content: space-between;
+    color: var(--text-color);
+}
+
+.module-content span {
+    color: var(--neon-pink);
+    font-weight: bold;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.module-content span.updated {
+    animation: pulse 0.3s ease;
+}
+
+.connection-status {
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.connection-status.connected {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.connection-status.disconnected {
+    background-color: #f44336;
+    color: white;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+#map-module {
+    grid-column: 1 / -1;
+}
+
+#map {
+    width: 100%;
+    height: 300px;
+    border-radius: 8px;
+    overflow: hidden;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
+    user-drag: none;
+    border: 3px solid var(--neon-blue);
+    box-shadow: 0 0 15px var(--neon-blue);
+}
+
+/* Custom map marker styling */
+.custom-marker-container {
+    background: none !important;
+    border: none !important;
+}
+
+.custom-marker {
+    font-size: 28px;
+    filter: drop-shadow(0 0 5px var(--neon-pink)) drop-shadow(0 0 10px var(--neon-blue));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: pulse-marker 2s infinite ease-in-out;
+}
+
+@keyframes pulse-marker {
+    0% {
+        transform: scale(1);
+        opacity: 0.8;
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 0.8;
+    }
+}
+
+.leaflet-marker-icon {
+    filter: drop-shadow(0 0 5px var(--neon-pink));
+}
+
+/* Remove Leaflet zoom control background for better aesthetics */
+.leaflet-control-zoom {
+    background: rgba(13, 2, 33, 0.8) !important;
+    border: 1px solid var(--neon-purple) !important;
+}
+
+.leaflet-control-zoom a {
+    color: var(--neon-blue) !important;
+    background: rgba(13, 2, 33, 0.8) !important;
+}
+
+.leaflet-control-zoom a:hover {
+    color: var(--neon-pink) !important;
+    background: var(--darker-bg) !important;
+}
+
+/* Responsive layout adjustments */
+@media (min-width: 768px) {
+    .dashboard {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 992px) {
+    .dashboard {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (min-width: 1200px) {
+    .dashboard {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* Mobile-specific adjustments */
+@media (max-width: 767px) {
+    .module-controls {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .header-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .connection-status {
+        position: static;
+        margin-top: 5px;
+    }
+} 
