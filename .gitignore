@@ -1,0 +1,12 @@
+venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pyw
+*.pyz
+
+docs/
+sensor-logger.log
+sensor_server.log
+.DS_Store

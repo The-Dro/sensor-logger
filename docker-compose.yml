@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  sensor-server:
+    build: .
+    container_name: sensor-server
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/app          # optional: mount local code for live edits
+      - ./sensor-data:/app/sensor-data  # persistent static files
+    environment:
+      - FLASK_ENV=production
+    restart: unless-stopped

@@ -1,0 +1,171 @@
+{
+  "messageId": 9999,
+  "sessionId": "12345678-1234-1234-1234-123456789012",
+  "deviceId": "abcd1234-abcd-1234-abcd-1234abcd1234",
+  "payload": [
+    {
+      "name": "accelerometeruncalibrated",
+      "time": 1.1234567890123456e+18,
+      "values": {
+        "z": 0.123456789,
+        "y": -0.234567890,
+        "x": 0.345678901
+      }
+    },
+    {
+      "name": "gravity",
+      "time": 1.1234567890123456e+18,
+      "values": {
+        "z": -9.80665,
+        "y": 0.0,
+        "x": 0.0
+      }
+    },
+    {
+      "values": {
+        "magneticBearing": 180.0
+      },
+      "name": "magnetometer",
+      "time": 1.1234567890123456e+18,
+      "accuracy": 3
+    },
+    {
+      "values": {
+        "magneticBearing": 180.0
+      },
+      "name": "compass",
+      "time": 1.1234567890123456e+18,
+      "accuracy": 3
+    },
+    {
+      "name": "orientation",
+      "time": 1.1234567890123456e+18,
+      "values": {
+        "yaw": 0.0,
+        "qx": 0.0,
+        "qz": 0.0,
+        "roll": 0.0,
+        "qw": 1.0,
+        "qy": 0.0,
+        "pitch": 0.0
+      }
+    },
+    {
+      "name": "gyroscope",
+      "time": 1.1234567890123456e+18,
+      "values": {
+        "z": 0.0,
+        "y": 0.0,
+        "x": 0.0
+      }
+    },
+    {
+      "name": "accelerometer",
+      "time": 1.1234567890123456e+18,
+      "values": {
+        "z": 0.0,
+        "y": 0.0,
+        "x": 0.0
+      }
+    },
+    {
+      "name": "battery",
+      "time": 1.1234567890123456e+18,
+      "values": {
+        "batteryLevel": 0.8,
+        "batteryState": "charging",
+        "lowPowerMode": false
+      }
+    },
+    {
+      "name": "brightness",
+      "time": 1.1234567890123456e+18,
+      "values": {
+        "brightness": 100
+      }
+    },
+    {
+      "name": "magnetometeruncalibrated",
+      "time": 1.1234567890123456e+18,
+      "values": {
+        "z": 0.0,
+        "y": 0.0,
+        "x": 0.0
+      }
+    },
+    {
+      "name": "gyroscopeuncalibrated",
+      "time": 1.1234567890123456e+18,
+      "values": {
+        "z": 0.0,
+        "y": 0.0,
+        "x": 0.0
+      }
+    },
+    {
+      "name": "accelerometeruncalibrated",
+      "time": 1.1234567890123456e+18,
+      "values": {
+        "z": 0.0,
+        "y": 0.0,
+        "x": 0.0
+      }
+    },
+    {
+      "name": "gravity",
+      "time": 1.1234567890123456e+18,
+      "values": {
+        "z": -9.80665,
+        "y": 0.0,
+        "x": 0.0
+      }
+    },
+    {
+      "values": {
+        "magneticBearing": 180.0
+      },
+      "name": "magnetometer",
+      "time": 1.1234567890123456e+18,
+      "accuracy": 3
+    },
+    {
+      "values": {
+        "magneticBearing": 180.0
+      },
+      "name": "compass",
+      "time": 1.1234567890123456e+18,
+      "accuracy": 3
+    },
+    {
+      "name": "orientation",
+      "time": 1.1234567890123456e+18,
+      "values": {
+        "yaw": 0.0,
+        "qx": 0.0,
+        "qz": 0.0,
+        "roll": 0.0,
+        "qw": 1.0,
+        "qy": 0.0,
+        "pitch": 0.0
+      }
+    },
+    {
+      "name": "gyroscope",
+      "time": 1.1234567890123456e+18,
+      "values": {
+        "z": 0.0,
+        "y": 0.0,
+        "x": 0.0
+      }
+    },
+    {
+      "name": "accelerometer",
+      "time": 1.1234567890123456e+18,
+      "values": {
+        "z": 0.0,
+        "y": 0.0,
+        "x": 0.0
+      }
+    }
+  ]
+}
