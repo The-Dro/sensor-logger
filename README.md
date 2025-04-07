@@ -42,3 +42,8 @@ python server.py
  - Removing the need for physically having to type in an ip address for your device in the script.js
 
  - Started setting up a docker-compose.yml to automate the full server install. Need to run and test it locally still. 
+
+
+![ScreenShot | Sensor Logger](sample-data/img/ss.png)
+
+
